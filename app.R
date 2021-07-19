@@ -14,13 +14,21 @@ library(googledrive)
 library(googlesheets4)
 
 # Loading data from googledrive 
-
+#drive_auth(cache = ".secrets", email = "easa90657@gmail.com", use_oob = TRUE, scopes = "https://www.googleapis.com/auth/drive")
+# drive_auth(email = "easa90657@gmail.com")
+# gs4_auth(email = "easa90657@gmail.com")
+# #drive_deauth()
+# options(
+#     gargle_oauth_cache = ".secrets",
+#     gargle_oauth_email = TRUE
+# )
 # deadlines in current year 
 # gd <- drive_get("current_year")
-# dat <- read_sheet(gd, col_names = TRUE, col_types = "cccccccdddDcDcDcccccccccccddc") 
+# dat <- read_sheet(gd, col_names = TRUE, col_types = "cccccccdddDcDcDcccccccccccddc")
 #write_csv(dat, "Data/dat.csv")
 
 dat <- read_csv("Data/dat.csv")
+
 # assessments to be included next year 
 # gda <- drive_get("assess_dat")
 # assess_dat <- read_sheet(gda, col_names = TRUE, col_types = "ccccccdddd") %>% 
@@ -29,7 +37,7 @@ dat <- read_csv("Data/dat.csv")
 
 #module programme information
 # gdp <- drive_get("prog_dat")
-# prog_dat <- read_sheet(gdp, col_names = TRUE, col_types = "cccdc")
+# prog_dat <- read_sheet(gdp, col_names = TRUE, col_types = "ccccd")
 #write_csv(prog_dat, "Data/prog_dat.csv")
 prog_dat <- read_csv("Data/prog_dat.csv")
 
